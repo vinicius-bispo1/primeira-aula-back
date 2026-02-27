@@ -1,9 +1,10 @@
+require("dotenv").config();
 // Importamos o express
 const express = require("express");
 
 // criando uma aplicação express, aqui estamos inicializando o nosso servidor
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 // "/" significa rota principal (http://localhost:3000/)
 app.get("/", (req, res) => {
   //req = request (dados enviados pelo cliente)
